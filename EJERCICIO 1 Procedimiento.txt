@@ -1,0 +1,91 @@
+Ejercicio 1
+
+1-Aqui modifico el archivo que estoy trabajando en la custom-navbar.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (custom-navbar)
+$ vim style.css
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (custom-navbar)
+$ git status
+On branch custom-navbar
+Your branch is up to date with 'origin/custom-navbar'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   style.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+2-Me queda sin commit ya que debo ir al branch master para eliminar status.js, utilizo el comando stash para guardar temporalmente la actividad que estoy haciendo.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (custom-navbar)
+$ git stash
+warning: in the working copy of 'style.css', LF will be replaced by CRLF the nex
+t time Git touches it
+Saved working directory and index state WIP on custom-navbar: 4d83ea4 add navbar
+ style
+
+3-Una vez hecho el git stash cambio de rama para poder trabajar en la urgencia.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (custom-navbar)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git pull
+Already up to date.
+
+4-Elimino el archivo 
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ rm status.js
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    status.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+5- Se guarda el cambio con un git add.
+ 
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git add .
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    status.js
+
+
+6- Realizo el commit.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git commit -m "Deleted status.js"
+[master 656dfd2] Deleted status.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 status.js
+
+7. Subo los cambios al repositorio remoto
+ 
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 241 bytes | 241.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/FrancoBondioni/website.git
+   13ab220..656dfd2  master -> master
