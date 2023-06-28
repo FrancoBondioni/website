@@ -1,0 +1,99 @@
+Desafio 3
+EJERCICIO 2
+1- Primero cree la rama front-react
+2- Ingrese a la rama para trabajar en ella y cree el archivo React.js, lo agregue y le realice un commit.
+3- Una vez agregado me resulto hacerle una modificacion hice devuelta los pasos correspondientes de agregarlo y commitearlo, luego cambie de rama a la rama master y utilice el comando git merge front-react haciendo que lo que tenia 
+en la rama front-react en este caso el archivo React.js se logre fusionar con la rama master.
+4- Por ultimo utilice un git push para enviar los cambios al repositorio remoto.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git push --set-upstream origin front-react
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'front-react' on GitHub by visiting:
+remote:      https://github.com/FrancoBondioni/website/pull/new/front-react
+remote:
+To https://github.com/FrancoBondioni/website.git
+ * [new branch]      front-react -> front-react
+branch 'front-react' set up to track 'origin/front-react'.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ touch React.Js
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git add .
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git commit -m "Add version 1.0.0 React.js"
+[front-react 76fc758] Add version 1.0.0 React.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 React.Js
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 250 bytes | 250.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FrancoBondioni/website.git
+   cb54c5e..76fc758  front-react -> front-react
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ vim React.Js
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git add .
+warning: in the working copy of 'React.Js', LF will be replaced by CRLF the next time Git touches it
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git commit -m "Final version React.js"
+[front-react 4931554] Final version React.js
+ 1 file changed, 1 insertion(+)
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/FrancoBondioni/website.git
+   6340bb9..4931554  front-react -> front-react
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git branch master
+fatal: a branch named 'master' already exists
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (front-react)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git merge front-react
+Merge made by the 'ort' strategy.
+ README.md | 0
+ React.Js  | 1 +
+ 2 files changed, 1 insertion(+)
+ delete mode 100644 README.md
+ create mode 100644 React.Js
+
+Franco Cpu@DESKTOP-VLJTAP8 MINGW64 /c/desarrollo/Eit/website (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 328 bytes | 328.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/FrancoBondioni/website.git
+   35e389c..6657078  master -> master
